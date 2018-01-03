@@ -1,0 +1,39 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/2.1.0/angular-drag-and-drop-lists.min.js"></script>
+<link rel="stylesheet" href="quiz-fill-in-blank.css">
+<script src="./quiz-fill-in-blank.js"></script>
+<script>
+    angular
+        .module("App", ["FillInBlankQuiz"])
+        .run(function ($rootScope) {
+            var scope = $rootScope;
+            scope.quiz = {
+                "id": 3447,
+                "number": 1,
+                "videoStart": 46,
+                "videoEnd": 108,
+                "linkedVideoID": null,
+                "type": 3,
+                "linkedQuizID": null,
+                "tip": null,
+                "hint": null,
+                "time": 0,
+                "answers": [{
+                    "id": 119761,
+                    "text": "?",
+                    "isCorrect": false,
+                    "properties": {"prefix": "<", "postfix": "php"}
+                }],
+                "question": "Fill in the correct character.\r\n[!raw!]\r\n{0}\r\n  echo 'Hello';\r\n?>",
+                "textContent": "[h1]PHP Syntax[/h1]\r\n\r\nA PHP script starts with [b]<?php[/b] and ends with [b]?>[/b]: [code format=\"php\" ][b]<?php[/b]\r\n  // PHP code goes here\r\n[b]?>[/b][/code]\r\nHere is an example of a simple PHP file. The PHP script uses a built in function called \"[b]echo[/b]\" to output the text \"Hello World!\" to a web page.[code format=\"php\" codeId=\"454\"]<html>\r\n  <head>\r\n    <title>My First PHP Page</title>\r\n  </head>\r\n  <body>\r\n[b]  <?php   \r\n    echo \"Hello World!\";\r\n  ?>[/b]\r\n  </body>\r\n</html>[/code]\r\n[note]PHP statements end with [b]semicolons (;)[/b].[/note]"
+            };
+            scope.placeholder = scope.quiz.question.split("[!raw!]")[1];
+            scope.answers = scope.quiz.answers;
+            scope.doWhat = function () {
+                console.log("correct!");
+            };
+        });
+</script>
+<body ng-app="App">
+    <fill-in-blank-quiz placeholder="placeholder" answers="answers" event-correct="doWhat()"></fill-in-blank-quiz>
+</body>

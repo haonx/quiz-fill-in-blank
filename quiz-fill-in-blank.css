@@ -1,0 +1,42 @@
+.typeInControl .prefix, .typeInControl .postfix {
+    display: inline-block;
+}
+.typeInControl .answer {
+    display: inline-block;
+    position: relative;
+}
+.typeInControl .realText {
+    color:transparent;
+    text-decoration: underline;
+    text-decoration-color: #757575;
+    padding-bottom: 4px;
+    text-align: left;
+    white-space: nowrap;
+    /*visibility: hidden;*/
+}
+.typeInControl .materialInput, .typeInControl .resultText {
+    outline: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typeInControl .prefix, .typeInControl .postfix {
+    display: inline-block;
+}
+.placeholderQuiz .placeholder {
+    display: inline-block;
+}
+.placeholderQuiz {
+    font-family: monospace;
+    width: 500px;
+    text-align: left;
+    font-size: 20px;
+    margin: auto;
+}
+
