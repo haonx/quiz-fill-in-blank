@@ -1,0 +1,20 @@
+{
+  "name": "Quiz Fill In Blank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haonx/quiz-fill-in-blank"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haonx/quiz-fill-in-blank/issues"
+  },
+  "homepage": "https://github.com/haonx/quiz-fill-in-blank#readme"
+}
