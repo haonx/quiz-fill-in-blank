@@ -59,6 +59,7 @@ angular
                     scope.segments = scope.segments.map(function (segment) {
                         var html;
                         html = segment.text;
+                        html = html.replace(/</gi,"&lt;");
                         html = html.replace(/\r\n/gi,'<br/>');
                         html = html.replace(/ /gi,'&nbsp;');
                         segment.html = html;
