@@ -87,7 +87,7 @@ angular
                         }
                     };
                 },
-                template: '<div class="answers placeholderTypeInQuiz placeholderQuiz"> <div class="textblock raw"> <span ng-repeat="segment in segments"> <div class="placeholder" ng-if="segment.typeof === \'placeholder\'"> <div class="answer"> <div class="typeInControl"> <div class="prefix">{{segment.prefix}}</div> <div class="answer"> <span class="realText">{{segment.text}}</span> <span class="resultText" contenteditable="true" ng-keydown="fill(segment, $event)" ng-keyup="fill(segment, $event)"></span> </div> <div class="postfix">{{segment.postfix}}</div> </div> </div> </div> <span ng-if="segment.typeof === \'raw\'" ng-bind-html="segment.html"></span> </span> </div> </div>',
+                template: '<div class="answers placeholderTypeInQuiz placeholderQuiz"> <div class="textblock raw"> <span ng-repeat="segment in segments"> <div class="placeholder" ng-if="segment.typeof === \'placeholder\'"> <div class="answer"> <div class="typeInControl"> <div class="prefix" ng-if="segment.prefix">{{segment.prefix}}</div> <div class="answer"> <span class="realText">{{segment.text}}</span> <span class="resultText" contenteditable="true" ng-keydown="fill(segment, $event)" ng-keyup="fill(segment, $event)"></span> </div> <div class="postfix" ng-if="segment.postfix">{{segment.postfix}}</div> </div> </div> </div> <span ng-if="segment.typeof === \'raw\'" ng-bind-html="segment.html"></span> </span> </div> </div>',
                 scope: {
                     eventCorrect: "&eventCorrect",
                     placeholder: "=",
