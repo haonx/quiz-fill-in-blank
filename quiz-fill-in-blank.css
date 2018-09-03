@@ -12,6 +12,7 @@
     padding-bottom: 4px;
     text-align: left;
     white-space: nowrap;
+    text-decoration-skip-ink: none;
     /*visibility: hidden;*/
 }
 .typeInControl .materialInput, .typeInControl .resultText {
